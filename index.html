@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="./bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="./css/main.css" />
+    <link type="text/css"rel="stylesheet" href="./css/main.css" />
     <title>Open Integrator</title>
   </head>
 
@@ -11,66 +11,7 @@
     <div class="jumbotron">
       <h1>Bird Sync</h1>    
       <p>Sync your systems with a few clicks</p>
-      <button tyoe="button" class="btn btn-success btn-md" onclick="runProcess()">Run Process</button>
-    </div>
-    <div class="container app-selection">
-      <h4>Select applications to sync;</h4>
-      <div class="row">
-        <div class="col source">
-          <div class="dropdown">
-            <button class="dropbtn">Select an app</button>
-            <div class="dropdown-content">
-            <a id="excel-source" onclick="createDataSourceUI(this.id)" href="#">Excel<img src="./assets/icons/excel.png"></a>
-            <a id="salesforce-source" onclick="createDataSourceUI(this.id)" href="#">Salesforce <img src="./assets/icons/salesforce.png"></a>
-            <a id="netsuite-source" onclick="createDataSourceUI(this.id)" href="#">NetSuite <img src="./assets/icons/netsuite.png"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col destination">
-          <div class="dropdown">
-            <button class="dropbtn">Select an app</button>
-            <div class="dropdown-content">
-            <a id="excel-destination" onclick="createDataSourceUI(this.id)" href="#">Excel<img src="./assets/icons/excel.png"></a>
-            <a id="salesforce-destination" onclick="createDataSourceUI(this.id)" href="#">Salesforce<img src="./assets/icons/salesforce.png"></a>
-            <a id="netsuite-destination" onclick="createDataSourceUI(this.id)" href="#">NetSuite<img src="./assets/icons/netsuite.png"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container map">
-    <div class="row">
-      <div class="col">
-        <div class="source">
-          <div class="query-object">
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="destination">
-          <div class="query-object">
-          </div>
-        <br>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-3 canvas">
-      <canvas id="canvas" width="950px" height="950px"></canvas>
-      <div class="fields source">
-        <h5></h5>
-      </div>
-      <div class="fields destination">
-        <h5></h5>
-      </div>
-    </div>
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-    <script src="./map.js"></script>
-    <script src="./connectors/salesforce/salesforce.js"></script>
-    <script src="./connectors/excel/excel.js"></script>
-    <script src="./connectors/netsuite/netsuite.js"></script>
-    <script src="./run_process.js"></script>
-    <script src="./ui.js"></script>
+      <!-- <button tyoe="button" class="btn btn-success btn-md" onclick="runProcess()">Run Process</button> -->
     </div>
   </body>
 </html>
