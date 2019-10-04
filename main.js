@@ -4,11 +4,15 @@ console.log('Hello Hello Starting Server');
 
 // content of index.js
 const http = require('http')
+const fs = require("fs");
 const port = 8080;
+
+var html = fs.readFileSync('index.html');
 
 const requestHandler = (request, response) => {
   console.log(request.url)
-  response.end('<h1>hello</h1>');
+  response.writeHead(200, {'Content-Type': 'text/html'});
+  response.end(html);
 }
 
 const server = http.createServer(requestHandler)
