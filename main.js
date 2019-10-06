@@ -1,26 +1,15 @@
-console.log('Hello Hello Starting Server');
-//hello
 
-
-// content of index.js
-const http = require('http')
-const fs = require("fs");
+const express = require('express');
 const port = 8080;
 
-var html = fs.readFileSync('index.html');
+const app = express();
 
-const requestHandler = (request, response) => {
-  console.log(request.url)
-  response.writeHead(200, {'Content-Type': 'text/html'});
-  response.end(html);
-}
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
+});
 
-const server = http.createServer(requestHandler)
+app.use(express.static('public'));
 
-server.listen(port, (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-
-  console.log(`server is listening on ${port}`)
-})
+app.listen(port, function () {
+  console.log("Server is running on "+ port +" port");
+});
