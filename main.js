@@ -1,6 +1,8 @@
+const excel = require('./connectors/excel/excel');
 const express = require('express');
 const port = 8080;
 const app = express();
+
 
 
 app.use(express.static('public'));
@@ -18,5 +20,7 @@ io.on('connection', function(client) {
 
     client.on('join', function(data) {
         console.log(data);
+        excel.sayExcel();
+
     });
 });

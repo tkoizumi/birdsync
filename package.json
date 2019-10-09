@@ -1,0 +1,27 @@
+{
+  "name": "birdsync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-salesforce": "^0.8.0",
+    "node-xlsx": "^0.15.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "main.js",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkoizumi/birdsync.git"
+  },
+  "author": "Taka Koizumi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkoizumi/birdsync/issues"
+  },
+  "homepage": "https://github.com/tkoizumi/birdsync#readme"
+}
